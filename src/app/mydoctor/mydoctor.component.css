@@ -1,0 +1,36 @@
+.head {
+    color: rgb(136, 57, 20);
+    margin-left: 150px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+.detail label {
+    color: rgb(50, 127, 163);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+.detail {
+    margin-left: 200px;
+}
+
+.btn {
+    margin-left: 300px;
+}
+
+.full {
+    margin-left: 220px;
+}
+
+.tablehead {
+    font-size: 16px;
+}
+
+.tablebody {
+    font-size: 15px;
+}

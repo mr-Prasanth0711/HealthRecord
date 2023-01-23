@@ -1,0 +1,19 @@
+<div class="navigate">
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Welcome Health Record</a>
+      <div>
+        <h4 class="username">Hello..{{user}}</h4>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="sidebar" style="font-size: 17px;">
+  <a class="active" href="/homedashboard">Home</a>
+  <a href="/UserDetails">Profile</a>
+  <a href="/basicdetail">Add Basic Details</a>
+  <a href="/profile">Add Records</a>
+  <a href="/mydoctor">My Doctor</a>
+  <a href="/changepassword">Change Password</a>
+  <a (click)="logout()" href="#about">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+</div>

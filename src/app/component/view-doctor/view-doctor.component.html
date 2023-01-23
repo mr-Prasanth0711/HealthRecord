@@ -1,0 +1,41 @@
+<app-userdashboard></app-userdashboard>
+<div class="full">
+    <p class="head">DOCTOR DETAILS:</p>
+
+    <div class="detail">
+
+        <div class="name">
+            <label for="">Doctor Name:</label>
+            {{Details.doctorName}}
+        </div>
+        <div class="age">
+            <label for="">Hospital Name:</label>
+            {{Details.email}}
+        </div>
+        <div>
+            <label for="">Reord Type:</label>
+            {{Details.recordType}}
+        </div>
+
+        <div>
+            <label for="">Problem:</label>
+            {{Details.problem}}
+        </div>
+        <div>
+            <label for="">Hospital Address:</label>
+            {{Details.address}}
+        </div>
+        <div>
+            <label for="">Last Consulted Date:</label>
+            {{Details.lastDate | date:"dd-MM-yyyy"}}
+        </div>
+        <div>
+            <label for="">Next Consulted Date:</label>
+            {{Details.nextDate | date:"dd-MM-yyyy"}}
+        </div>
+        <div>
+            <label for="">Prescription:</label>
+          <a (click)="DowloadFile(Details.files)">  {{Details.files}}</a>
+        </div>
+    </div>
+</div>

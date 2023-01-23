@@ -1,0 +1,45 @@
+<app-dashboard></app-dashboard>
+<div class="content">
+  <div class="head">
+    <h4 class="text"> Users Basic Health Details</h4>
+    <label for="search" class="search">Search:</label>
+    <input [(ngModel)]="searchText" type="text" placeholder="search" id="search">
+  </div>
+  <table id="example" class="table table-striped" style="width:100%">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Blood Group</th>
+        <th>Blood Pressure</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Date of Birth</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let obj of Details  | filter:searchText |paginate:{itemsPerPage:5, currentPage:page,totalItems: totalItems}">
+
+        <td>{{obj.id}}</td>
+        <td>{{obj.firstname}}</td>
+        <td>{{obj.age}}</td>
+        <td>{{obj.gender}}</td>
+        <td>{{obj.bloodgroup}}</td>
+        <td>{{obj.bloodpressure}}</td>
+        <td>{{obj.height}}</td>
+        <td>{{obj.weight}}</td>
+        <td>{{obj.dateofbirth | date:"dd-MM-yyyy"}}</td>
+        <td>{{obj.city}}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="pagination((page = $event))"></pagination-controls>
+
+
+</div>

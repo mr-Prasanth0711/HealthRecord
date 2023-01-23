@@ -1,0 +1,32 @@
+.text {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.head {
+  font-size: 20px;
+  color: cadetblue;
+}
+
+.content {
+  margin-left: 250px;
+}
+
+.text-center {
+  color: darkcyan;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.btn2 {
+  margin-left: 800px;
+}
+
+.file {
+  width: 400px;
+}
+
+.upload {
+  position: absolute;
+  margin-left: 410px;
+}

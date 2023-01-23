@@ -1,0 +1,28 @@
+.input {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+.title {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.input1 {
+    width: 300px;
+    height: 150px;
+    margin-left: 150px;
+
+}
+
+.content {
+    margin-left: 200px;
+}
+
+.top {
+    position: sticky;
+    top: 0;
+}

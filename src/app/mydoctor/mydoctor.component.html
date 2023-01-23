@@ -1,0 +1,35 @@
+<app-userdashboard></app-userdashboard>
+<div class="full">
+    <div class="table">
+        <table class="table  table-striped table-bordered">
+            <thead class="tablehead">
+                <th scope="col">S.No:</th>
+                <th scope="col">Doctor Name:</th>
+                <th scope="col">Hospital Name:</th>
+                <th scope="col">Problem:</th>
+                <th scope="col">Hospital Address:</th>
+                <th scope="col">Last Consultation Date:</th>
+                <th scope="col">Next Consultation Date:</th>
+                <th scope="col">Prescription:</th>
+                <th scope="col">Action</th>
+            </thead>
+            <tbody class="tablebody">
+                <tr *ngFor="let obj of Details[0] ; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{obj.doctorName}}</td>
+                    <td>{{obj.email}}</td>
+                    <td>{{obj.problem}}</td>
+                    <td>{{obj.address}}</td>
+                    <td>{{obj.lastDate | date:"dd-MM-yyyy"}}</td>
+                    <td>{{obj.nextDate | date:"dd-MM-yyyy"}}</td>
+                    <td> <a (click)="DowloadFile(obj.files)">{{obj.files}}</a></td>
+                    <td><a type="button" [routerLink]="['/mydoctor','editdoctor',obj.id]" class="">Edit</a><br>
+                        <a type="button" [routerLink]="['/mydoctor','viewdotor',obj.id]" class="">view</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

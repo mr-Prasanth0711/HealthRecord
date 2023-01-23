@@ -1,0 +1,46 @@
+<app-userdashboard></app-userdashboard>
+<div class="full">
+    <p class="head">PROFILE DETAILS:</p>
+
+    <div class="detail">
+        <div class="btn">
+            <a href="" [routerLink]="['/UserDetails','editDetail',Details.firstname]">Edit Details </a>
+        </div>
+        <div class="name">
+            <label for="">Name:</label>
+            {{Details.firstname}}
+        </div>
+        <div class="age">
+            <label for="">Age:</label>
+            {{Details.age}}
+        </div>
+        <div>
+            <label for="">Blood Group:</label>
+            {{Details.bloodgroup}}
+        </div>
+        <div>
+            <label for="">Permanant Diseases:</label>
+            {{Details.diseases}}
+        </div>
+        <div>
+            <label for="">Height:</label>
+            {{Details.height}}
+        </div>
+        <div>
+            <label for="">Weight:</label>
+            {{Details.weight}}
+        </div>
+        <div>
+            <label for="">Blood Pressure:</label>
+            {{Details.bloodpressure}}
+        </div>
+        <div>
+            <label for="">City:</label>
+            {{Details.city}}
+        </div>
+        <div>
+            <label for="">Mobile Number:</label>
+            {{Details.mobileno}}
+        </div>
+    </div>
+</div>

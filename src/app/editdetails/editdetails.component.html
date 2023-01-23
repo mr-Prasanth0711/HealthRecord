@@ -1,0 +1,85 @@
+<app-userdashboard></app-userdashboard>
+<div class="head">
+    <div class="header">
+
+    </div>
+    <form class="row g-2" #form="ngForm" (submit)="saveChange()">
+        <div>
+            <h4>Edit Details</h4>
+        </div>
+        <div class="col-3">
+            <label for="" class="form-label">First Name:</label>
+            <input type="text" class="form-control" id="inputEmail4" name="firstname" [(ngModel)]="Details.firstname">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="inputPassword4" name="lastname" [(ngModel)]="Details.lastname">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">date Of Birth:</label>
+            <input type="date" class="form-control" id="inputAddress" name="dateofbirth"
+                [ngModel]="Details.dateofbirth  | date:'yyyy-MM-dd'" (ngModelChange)="Details.dateofbirth  = $event"
+                [value]="Details.dateofbirth  | date:'yyyy-MM-dd' ">
+        </div>
+        <div class="col-3"><br>
+            <label for="" class="form-label">Age:</label>
+            <input type="text" class="form-control" id="inputCity" name="age" [(ngModel)]="Details.age">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3"><br>
+            <label for="" class="form-label">Gender:</label>
+            <input type="text" class="form-control" name="gender" [(ngModel)]="Details.gender">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <div class="col-3" id="blood">
+            <br>
+            <label for="" class="form-label">Blood Group:</label>
+            <input type="email" class="form-control" name="bloodgroup" [(ngModel)]="Details.bloodgroup">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Height:</label>
+            <input type="text" class="form-control" name="height" [(ngModel)]="Details.height">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Weight:</label>
+            <input type="text" class="form-control" name="weight" [(ngModel)]="Details.weight">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Blood Pressure:</label>
+            <input type="text" class="form-control" name="bloodpressure" [(ngModel)]="Details.bloodpressure">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Permanant Diseases:</label>
+            <input type="text" class="form-control" name="diseases" [(ngModel)]="Details.diseases">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Email id:</label>
+            <input type="text" class="form-control" placeholder="example@gmail.com" name="email"
+                [(ngModel)]="Details.email">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Street:</label>
+            <input type="text" class="form-control" name="street" [(ngModel)]="Details.street">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Landmark:</label>
+            <input type="text" class="form-control" placeholder="" name="landmark" [(ngModel)]="Details.landmark">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">City:</label>
+            <input type="text" class="form-control" placeholder="" name="city" [(ngModel)]="Details.city">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Pincode:</label>
+            <input type="text" class="form-control" placeholder="" name="pincode" [(ngModel)]="Details.pincode">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Mobile Number:</label>
+            <input type="text" class="form-control" placeholder="" name="mobileno" [(ngModel)]="Details.mobileno">
+        </div>
+
+        <div class="col-12"><br>
+            <button id="btnsave" type="submit" class="btn btn-primary">save</button>
+        </div>
+
+    </form>

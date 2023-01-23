@@ -1,0 +1,53 @@
+.row {
+    margin-top: 10px;
+    width: 1400px;
+    padding-left: 10%;
+    padding-right: 9%;
+    margin-left: 150px;
+}
+
+input {
+    width: 250px;
+    border-color: black;
+    height: 30px;
+}
+
+.heade {
+    background-color: blue;
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.modal {
+    width: 100px;
+}
+
+select {
+    width: 250px;
+    height: 30px;
+    border-color: black;
+}
+
+.header {
+    margin-left: 17%;
+    font-style: inherit;
+    color: blue;
+}
+
+.head {
+    position: sticky;
+    top: 0;
+}
+
+.btnsave {
+    margin-left: 500px;
+}
+
+.title {
+    color: coral;
+}
+
+.heading1 {
+    color: chocolate;
+}

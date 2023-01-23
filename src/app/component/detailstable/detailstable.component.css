@@ -1,0 +1,17 @@
+table {
+  width: 67%;
+}
+
+.content {
+  margin-left: 200px;
+}
+
+.text {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.search {
+  margin-left: 170px;
+}

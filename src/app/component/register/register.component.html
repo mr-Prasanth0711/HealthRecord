@@ -1,0 +1,77 @@
+<div><app-topbar></app-topbar></div>
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-4 col-md-4 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Register</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="RegisterForm">
+                            <div class="form-group pt-1 ">
+                                <div class="input-field"
+                                    [class.error]="RegisterForm.controls['username'].dirty && RegisterForm.hasError('required','username')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="username" type="text" placeholder="username">
+                                </div>
+                                <small
+                                    *ngIf="RegisterForm.controls['username'].dirty && RegisterForm.hasError('required','username')"
+                                    class="text-danger">*username is required</small>
+                            </div>
+                            <div class="form-group pt-2">
+                                <div class="input-field"
+                                    [class.error]="RegisterForm.controls['email'].dirty && RegisterForm.hasError('required','email')">
+                                    <span class="fa fa-light fa-envelope p-2"></span>
+                                    <input formControlName="email" type="text" placeholder="email">
+                                </div>
+                                <small
+                                    *ngIf="RegisterForm.controls['email'].dirty && RegisterForm.hasError('required','email')"
+                                    class="text-danger">*email is required</small>
+                            </div>
+                            <div class="form-group pt-2">
+                                <div class="input-field"
+                                    [class.error]="RegisterForm.controls['mobile'].dirty && RegisterForm.hasError('required','mobile')">
+                                    <span class="fa fa-phone p-2"></span>
+                                    <input formControlName="mobile" type="text" placeholder="mobile no">
+                                </div>
+                                <small
+                                    *ngIf="RegisterForm.controls['mobile'].dirty && RegisterForm.hasError('required','mobile')"
+                                    class="text-danger">*mobile number is required</small>
+                            </div>
+                            <div class="form-group pt-2">
+                                <div class="input-field"
+                                    [class.error]="RegisterForm.controls['password'].dirty && RegisterForm.hasError('required','password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="password" [type]="type" placeholder="password">
+                                    <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                                <small
+                                    *ngIf="RegisterForm.controls['password'].dirty && RegisterForm.hasError('required','password')"
+                                    class="text-danger">*password is required</small>
+                            </div>
+                            <div class="form-group pt-2">
+                                <div class="input-field"
+                                    [class.error]="RegisterForm.controls['confirmpassword'].dirty && RegisterForm.hasError('required','confirmpassword')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="confirmpassword" [type]="type"
+                                        placeholder="confirm password">
+                                    <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                                <small
+                                    *ngIf="RegisterForm.controls['confirmpassword'].dirty && RegisterForm.hasError('required','confirmpassword')"
+                                    class="text-danger">*confirmpassword is required</small>
+                            </div>
+
+
+                            <button (click)="onRegister()" type="submit"
+                                class="btn btn-primary  mt-4 btn-block w-100">Register</button>
+                            <div class="text-center pt-3 text-muted  ">Already have Account?<a id="forgot"
+                                    routerLink="/login">Login.</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

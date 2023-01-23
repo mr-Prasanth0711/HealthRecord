@@ -1,0 +1,59 @@
+<app-userdashboard></app-userdashboard>
+<div class="head">
+    <div class="header">
+    </div>
+    <form class="row g-2" #form="ngForm" (submit)="saveChange()">
+        <div>
+            <h4 class="heading1">Edit Doctor Details</h4>
+        </div>
+        <div class="col-3">
+            <label for="" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="inputEmail4" name="name" [(ngModel)]="Details.name">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Doctor Name:</label>
+            <input type="text" class="form-control" id="inputPassword4" name="doctorName"
+                [(ngModel)]="Details.doctorName">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3">
+            <label for="" class="form-label">Record Type:</label>
+            <input type="text" class="form-control" id="inputAddress" name="recordType" 
+                [(ngModel)]="Details.recordType">
+        </div>
+        <div class="col-3"><br>
+            <label for="" class="form-label">Problem:</label>
+            <input type="text" class="form-control" id="inputCity" name="problem" [(ngModel)]="Details.problem">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3"><br>
+            <label for="" class="form-label">Hospital Name:</label>
+            <input type="text" class="form-control" name="email" [(ngModel)]="Details.email">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3"><br>
+            <label for="" class="form-label">Hospital Address:</label>
+            <input type="text" class="form-control" name="address" [(ngModel)]="Details.address">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3" id="blood">
+            <br>
+            <label for="" class="form-label">Last Consultation Date:</label>
+            <input type="date" class="form-control" name="lastdate" [ngModel]="Details.lastDate  | date:'yyyy-MM-dd'"
+                (ngModelChange)="Details.lastDate  = $event" [value]="Details.lastDate  | date:'yyyy-MM-dd'">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-3" style="margin-top: 32px;">
+            <label for="" class="form-label">Next Consultation Date:</label>
+            <input type="date" class="form-control" name="nextDate" [ngModel]="Details.nextDate  | date:'yyyy-MM-dd'"
+                (ngModelChange)="Details.nextDate  = $event" [value]="Details.nextDate  | date:'yyyy-MM-dd' ">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="file mb-3 col-3 " style="margin-top: 40px;">
+            <label class="custom-file-label" for="inputGroupFile01">Select File:</label><br>
+            <input type="file" name="files" (change)="onchange($event)" [(ngModel)]="Details.files"
+                class="form-control">
+
+        </div>
+
+        <div class="col-12"><br>
+            <button id="btnsave" type="submit" class="btn btn-primary">save</button>
+        </div>
+
+    </form>
+</div>

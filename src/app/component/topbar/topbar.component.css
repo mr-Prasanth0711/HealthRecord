@@ -1,0 +1,18 @@
+.navbar-nav>li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: aqua;
+}
+
+.navbar-nav .nav-item {
+    color: black;
+}
